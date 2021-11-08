@@ -1,0 +1,115 @@
+:root {
+    --w: calc(30vw / 6);
+    --h: calc(40vh /3);
+}
+
+body {
+    height: 100vh;
+}
+
+* {
+    transition: all 0.5s;
+}
+
+.concentrese {
+    padding: 0;
+    margin: 0;
+    -webkit-perspective: 1000;
+    /* background: linear-gradient(45deg, #49a09d, #5f2c82); */
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: calibri;
+    height: calc(130vh - 100px - 50px)!important;
+}
+
+div {
+    display: inline-block;
+}
+
+.footer__bg {
+    display: grid;
+    height: 210px;
+}
+
+.footer_2 {
+    padding-bottom: 0;
+}
+
+.area-tarjeta,
+.tarjeta,
+.cara {
+    cursor: pointer;
+    width: var(--w);
+    min-width: 100px;
+    height: var(--h);
+}
+
+.tarjeta {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: iniciar 5s;
+}
+
+.cara {
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    /* height: 190px; */
+    /* width: 180px; */
+}
+
+.trasera {
+    background-color: lightcyan;
+    transform: rotateY(180deg);
+}
+
+.superior {
+    background: linear-gradient(#181b1b, #0b050f);
+}
+
+.title-concentrese {
+    /* margin-left: 80px; */
+    font-size: 2.5em;
+    color: black;
+}
+
+.text-concentrese {
+    /* margin-left: 80px; */
+    font-size: 2.5em;
+    color: black;
+}
+
+.nuevo-juego {
+    margin-top: 50px;
+    cursor: pointer;
+    background: linear-gradient(rgb(250, 145, 7), rgb(255, 0, 0));
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 130%;
+    color: white;
+    border: none;
+}
+
+.score {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@keyframes iniciar {
+    20%,
+    90% {
+        transform: rotateY(180deg);
+    }
+    0%,
+    100% {
+        transform: rotateY(0deg);
+    }
+}

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domi</title>
+    <link rel="icon" href="assets/icons/piza.png">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- CSS only -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/carrito.css" />
+</head>
+
+<body class="contentElement">
+    <!-- header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+
+            <div class="containerlogo">
+                <a href="#" class="nav__logo">Domi</a>
+                <img class="myLogo" src=" assets/icons/courier.png " alt=" " height="50px ">
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link active-link">
+                            <i class="uil uil-estate nav__icon"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="nosotros.html" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i>Nosotros
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="promociones.html" class="nav__link">
+                            <i class="uil uil-file nav__icon"></i>Promociones
+
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="restaurantes.html" class="nav__link">
+                            <i class="uil uil-briefcase-alt nav__icon"></i>Restaurantes
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="comida.html" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i>Comida
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contacto.html" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>Contacto
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="login.html" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>Login
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+            <div class="nav__btns">
+                <!-- Theme Change button -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="carrito__bg">
+
+        <ul class="nav  container" id="pills-tab" role="tablist">
+            <!-- <li class="nav-item text-primary" role="presentation">
+                    <a class="nav-link " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</a
+              >
+            </li> -->
+            <li class="staticElementl" role="">
+                <a class=" nav__link " id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="uil uil-shop iCarrito">Productos</i></a>
+            </li>
+            <li class=" staticElementr" role="">
+                <a class="nav__link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><i class="uil uil-shopping-cart iCarrito">Carrito</i>
+                    </a>
+            </li>
+        </ul>
+
+
+        <div class="home__container container grid">
+
+            <h1 class="home__title text-center">Selecciona <br>¿Que quieres hoy?</h1>
+            <section class="section">
+                <div class="alert container position-sticky top-0 alert-primary hide" role="alert">
+                    Producto Añadido al carrito!
+                </div>
+                <div class="alert container position-sticky top-0 alert-danger remove" role="alert">
+                    Producto removido!
+                </div>
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        1
+                    </div>
+                    <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+
+                        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+
+                            <div class="col d-flex justify-content-center mb-4">
+                                <div class="card shadow mb-1  rounded" style="width: 20rem;">
+                                    <h5 class="card-title pt-2 text-center text-dark ">Ajiaco</h5>
+                                    <img src="assets/img/restaurantes/ajiaco.jpeg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text text-black-50 description">El mejor ajiaco santafereño de la cuidad acompañado de porción de arroz, aguacate, crema de leche y una gran porción de pollo, no te lo pierdas .</p>
+                                        <h5 class=" text-price text-center text-dark"> <span class="precio">$ 50000</span></h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="button button--flex">Añadir a Carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex justify-content-center mb-4">
+                                <div class="card shadow mb-1  rounded" style="width: 20rem;">
+                                    <h5 class="card-title pt-2 text-center text-dark ">Carne a la parrilla</h5>
+                                    <img src="assets/img/restaurantes/carne.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text text-black-50 description"> Un maravilloso corte de la mejor carne, con un increible sazón hecho en estufa de leña, con los mejores acompañantes, papa, guacamole,yuca, y gaseosa, pruebalo no te quedes con el antojo. </p>
+                                        <h5 class="text-dark text-price text-center"> <span class="precio">$ 35000</span></h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="button button--flex">Añadir a Carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex justify-content-center mb-4">
+                                <div class="card shadow mb-1  rounded" style="width: 20rem;">
+                                    <h5 class="card-title pt-2 text-center text-dark ">Empanadas</h5>
+                                    <img src="assets/img/restaurantes/empanadas.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text text-black-50 description">Exquisitas empanadas, con el mejor acompañante un buen aji, borde crocante y delicioso rellenito. .</p>
+                                        <h5 class="text-dark text-price text-center"> <span class="precio">$ 8000</span></h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="button button--flex">Añadir a Carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex justify-content-center mb-4">
+                                <div class="card shadow mb-1  rounded" style="width: 20rem;">
+                                    <h5 class="card-title pt-2 text-center text-dark ">Helado</h5>
+                                    <img src="assets/img/restaurantes/ensalada.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text text-black-50 description">Deliciosos helados con mucha fruta, comida rica y muy saludable.</p>
+                                        <h5 class="text-dark text-price text-center"> <span class="precio">$ 4500</span></h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="button button--flex">Añadir a Carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex justify-content-center mb-4">
+                                <div class="card shadow mb-1  rounded" style="width: 20rem;">
+                                    <h5 class="card-title pt-2 text-center text-dark ">Hamburguesa </h5>
+                                    <img src="assets/img/restaurantes/hamburguesas.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text text-black-50 description">Y para esos dias de antojos las mejores hamburguesas con ricos ingredientes y las mejores carnes.</p>
+                                        <h5 class="text-dark text-price text-center"> <span class="precio">$ 19000</span></h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="button button--flex">Añadir a Carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex justify-content-center mb-4">
+                                <div class="card shadow mb-1  rounded" style="width: 20rem;">
+                                    <h5 class="card-title pt-2 text-center text-dark ">Pollo a la brasa</h5>
+                                    <img src="assets/img/restaurantes/pollo.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text text-black-50 description">Tienes antojos de un delicioso y jugoso pollo a la braza, con sus papitas y platanito.</p>
+                                        <h5 class="text-dark text-price text-center"> <span class="precio">$ 45000</span></h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="button button--flex">Añadir a Carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex justify-content-center mb-4">
+                                <div class="card shadow mb-1  rounded" style="width: 20rem;">
+                                    <h5 class="card-title pt-2 text-center text-dark ">Pastel</h5>
+                                    <img src="assets/img/restaurantes/tortas.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text text-black-50 description">El postre no lo podemos dejar de lado aqui encontraras los más deliciosos pastelitos.</p>
+                                        <h5 class="text-dark text-price text-center"> <span class="precio">$ 28000</span></h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="button button--flex">Añadir a Carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex justify-content-center mb-4">
+                                <div class="card shadow mb-1  rounded" style="width: 20rem;">
+                                    <h5 class="card-title pt-2 text-center text-dark ">Criolla</h5>
+                                    <img src="assets/img/restaurantes/criolla.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text text-black-50 description">Una receta distinta pero con la mejor calidad hamburguesas criollas con maiz y salsas de la casa..</p>
+                                        <h5 class="text-dark text-price text-center"> <span class="precio">$ 25000</span></h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="button button--flex ">Añadir a Carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <br>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr class="color_change">
+                                    <th scope="col"></th>
+                                    <th scope="col">Productos</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+
+                            </tbody>
+                        </table>
+                        <br><br>
+                        <div class="row mx-4">
+                            <div class="col">
+                                <h3 class="itemCartTotal text-black">Total: 0</h3>
+                            </div>
+                            <div class="col d-flex justify-content-end">
+                                <a href="pago.html" class="button button--flex">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <main class="main">
+
+        <footer class="footer_2">
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                    <div>
+                        <h1 class="footer__title">Domi</h1>
+                        <span class="footer__subtitle">Acercercamos todo a tu mesa </span>
+                    </div>
+                    <ul class="footer__links">
+                        <!-- <li>
+                        <a href="#services" class="footer__link">Services</a>
+                </li> -->
+                        <!-- <li>
+                        <a href="#portfolio" class="footer__link">Portfolio</a>
+                    </li> -->
+                        <li>
+                            <a href="#contact" class="footer__link">Contacto<br>305-745-28-45</a>
+                        </li>
+                    </ul>
+                    <div class="footer__socials">
+                        <a href="" class="footer__social">
+                            <i class="uil uil-facebook-f"></i>
+
+                        </a>
+                        <a href="" class="footer__social">
+                            <i class="uil uil-whatsapp"></i>
+
+                        </a>
+                        <a href="" class="footer__social">
+                            <i class="uil uil-facebook-messenger-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="footer__copy">&#169; Sena. Todos los derechos reservados </p>
+            </div>
+        </footer>
+        <!-- <a href="#" class="scrollup" id="scroll-up">
+            <i class="uil uil-arrow-up"></i>
+        </a> -->
+    </main>
+    <script src="assets/js/swiper-bundle.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/carrito.js"></script>
+</body>
+
+</html>

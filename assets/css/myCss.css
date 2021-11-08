@@ -1,0 +1,40 @@
+.services__content {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+}
+
+.title-restaurant {
+    width: 160px;
+}
+
+.services__button {
+    background-color: rgb(175, 53, 53);
+    color: #fff;
+    padding: 3px
+}
+
+.services__title {
+    color: #fff;
+    font-size: 1.2em;
+    background-color: rgb(49, 40, 40);
+    opacity: 0.6;
+    border-radius: 8px;
+    padding: 5px
+}
+
+.button--link2 {
+    padding: 0;
+    /* background-color: transparent; */
+    /* color: var(--first-color-alt); */
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 0.3rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+}

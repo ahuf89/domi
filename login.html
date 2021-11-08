@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domi</title>
+    <link rel="icon" href="assets/icons/piza.png">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- swiper -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<!-- 
+Roles
+1: admin
+2: cliente
+3: vendedor
+4: repartidor
+-->
+
+
+<!-- email: 'pablo@gmail.com',  password:       rol: '1' -->
+<!-- email: 'carlos@gmail.com', password:       rol: '1' -->
+<!-- email: 'juan@gmail.com',   password:       rol: '2' -->
+<!-- email: 'camilo@gmail.com', password:       rol: '2' -->
+<!-- email: 'maria@gmail.com',  password:       rol: '3' -->
+<!-- email: 'juana@gmail.com',  password:       rol: '3' -->
+<!-- email: 'pedro@gmail.com',  password:       rol: '4' -->
+<!-- email: 'camila@gmail.com', password:       rol: '4' -->
+
+
+
+<body>
+    <!-- header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="containerlogo">
+
+                <div class="containerlogo">
+                    <a href="#" class="nav__logo">Domi</a>
+                    <img class="myLogo" src=" assets/icons/courier.png " alt=" " height="50px ">
+                </div>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link active-link">
+                            <i class="uil uil-estate nav__icon"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="nosotros.html" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i>Nosotros
+
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="promociones.html" class="nav__link">
+                            <i class="uil uil-file nav__icon"></i>Promociones
+
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="restaurantes.html" class="nav__link">
+                            <i class="uil uil-briefcase-alt nav__icon"></i>Restaurantes
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="comida.html" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i>Comida
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contacto.html" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>Contacto
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="login.html" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>Login
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+            <div class="nav__btns">
+                <!-- Theme Change button -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main ">
+        <!-- home -->
+        <!-- <form>
+            <input type="text" placeholder="Correo" id="txtCorreo">
+            <input type="password" placeholder="Contraseña" value="123456" id="txtContrasenna">
+            <input type="button" value="Ingresar" id="btnIngresar">
+        </form> -->
+        <form class="login">
+            <div class="form">
+                <h1 class="">Login</h1>
+                <div class="grupo">
+                    <input type="text" value="juan@gmail.com" id="txtCorreo"><span class="barra "></span>
+                    <label>Email</label>
+                </div>
+                <div class="grupo">
+                    <input type="password" value="123456" id="txtContrasenna"><span class="barra"></span>
+                    <label>Password</label>
+                </div>
+
+                <div class="content-button">
+                    <input type="button" class="button" value="Iniciar Sesión" id="btnIngresar">
+                </div>
+                <div class="content-button">
+                    <a href="register.html ">Registrarse</a>
+                </div>
+
+                <p class="warnings"></p>
+            </div>
+        </form>
+
+
+        <footer class="footer endFooter ">
+            <div class="footer__bg ">
+                <div class="footer__container container grid ">
+                    <div>
+                        <h1 class="footer__title ">Domi</h1>
+                        <span class="footer__subtitle ">Acercercamos todo a tu mesa </span>
+                    </div>
+                    <ul class="footer__links ">
+                        <!-- <li>
+                                <a href="#services " class="footer__link ">Services</a>
+                            </li> -->
+                        <!-- <li>
+                                <a href="#portfolio " class="footer__link ">Portfolio</a>
+                            </li> -->
+                        <li>
+                            <a href="#contact " class="footer__link ">Contact</a><br>305-745-28-45
+                        </li>
+                    </ul>
+                    <div class="footer__socials ">
+                        <a href=" " class="footer__social ">
+                            <i class="uil uil-facebook-f "></i>
+
+                        </a>
+                        <a href=" " class="footer__social ">
+                            <i class="uil uil-whatsapp "></i>
+
+                        </a>
+                        <a href=" " class="footer__social ">
+                            <i class="uil uil-facebook-messenger-alt "></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="footer__copy ">&#169; Sena. Todos los derechos reservados </p>
+            </div>
+        </footer>
+        <a href="# " class="scrollup " id="scroll-up ">
+            <i class="uil uil-arrow-up "></i>
+        </a>
+    </main>
+
+    <script src="assets/js/login/logicaNegociosUsuarios.js"></script>
+    <script src="assets/js/login/logicaInterfazInicioSesion.js"></script>
+    <script src="assets/js/swiper-bundle.min.js "></script>
+    <script src="assets/js/main.js "></script>
+
+</body>
+
+</html>

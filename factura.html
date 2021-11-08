@@ -1,0 +1,196 @@
+<html>
+
+<head>
+
+    <title>Domi</title>
+    <link rel="icon" href="assets/icons/piza.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/javascript.ico">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- <link rel="stylesheet" href="assets/css/login.css"> -->
+</head>
+<script languaje="javascript">
+    function ver() {
+        if (document.f1.op[0].checked) {
+
+            document.getElementById("title").innerHTML = 'Visa'
+
+            document.f1.d1.width = 170
+            document.f1.d2.width = 0
+            document.f1.d3.width = 0
+            document.f1.d4.width = 0
+            document.f1.d5.width = 0
+            document.f1.d6.width = 0
+
+        } else if (document.f1.op[1].checked) {
+
+            document.getElementById("title").innerHTML = 'Masterd Card'
+
+            document.f1.d1.width = 0
+            document.f1.d2.width = 170
+            document.f1.d3.width = 0
+            document.f1.d4.width = 0
+            document.f1.d5.width = 0
+            document.f1.d6.width = 0
+
+        } else if (document.f1.op[2].checked) {
+
+            document.getElementById("title").innerHTML = 'American Express'
+
+
+            document.f1.d1.width = 0
+            document.f1.d2.width = 0
+            document.f1.d3.width = 170
+            document.f1.d4.width = 0
+            document.f1.d5.width = 0
+            document.f1.d6.width = 0
+
+        } else if (document.f1.op[3].checked) {
+
+            document.getElementById("title").innerHTML = 'Dinners'
+
+            document.f1.d1.width = 0
+            document.f1.d2.width = 0
+            document.f1.d3.width = 0
+            document.f1.d4.width = 170
+            document.f1.d5.width = 0
+            document.f1.d6.width = 0
+
+        } else if (document.f1.op[4].checked) {
+
+            document.getElementById("title").innerHTML = 'Cirrus'
+
+            document.f1.d1.width = 0
+            document.f1.d2.width = 0
+            document.f1.d3.width = 0
+            document.f1.d4.width = 0
+            document.f1.d5.width = 170
+            document.f1.d6.width = 0
+        }
+    }
+</script>
+
+<body>
+    <style>
+        table {
+            min-width: 400px;
+        }
+        
+        textarea {
+            border: none;
+            background-color: aliceblue;
+        }
+        
+        h1 {
+            font-size: 3.5em;
+        }
+        
+        .pay {
+            /* float: right; */
+            height: auto;
+        }
+        
+        form {
+            margin-top: 150px;
+        }
+        
+        .container {
+            margin-top: 250px;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        table {
+            padding: 45px;
+            border-radius: 10px;
+            box-shadow: 0 0 6px 0 rgba(12, 12, 12, 0.8);
+            color: black;
+            font-size: 25px;
+            font-family: "Helvetica Neue", Helvetica, Arial;
+        }
+        
+        td {
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+        
+        input {
+            float: left;
+            padding: 20px;
+            margin-right: 10px;
+            ;
+            /* border-radius: 13px; */
+        }
+        
+        input[type=radio] {
+            border: 100px;
+            width: 25px;
+            height: 1.5em;
+        }
+        
+        button {
+            padding: 15px 40px;
+            border-radius: 8px;
+            /* background: linear-gradient(45deg, #e6e208, #1bad53); */
+            font-size: 0.8em;
+            color: black;
+            border: none;
+            margin-top: 20px;
+        }
+        
+        .optionPay {
+            background-color: rgb(248, 249, 250);
+            padding: 10px;
+            border-radius: 50px 50px 0 0;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <br>
+    <br>
+    <center>
+        <form name=f1>
+            <!-- <div class=optionPay>
+
+            </div> -->
+            <table width=25% height=30% border=0 cellspacing=0>
+                <tr>
+                    <th id=title>Gracias por su pago</th>
+                    <th id=pago></th>
+
+                </tr>
+                <tr>
+                    <th id=pago>$47.000</th>
+                </tr>
+                <tr>
+                    <th id=title>Su producto llegara Pronto</th>
+
+                </tr>
+                <tr>
+                    <th class=optionPay>
+                        <img class="pay" src="assets/img/pay/visa.png" alt="" width="0" id=d1>
+                        <img class="pay" src="assets/img/pay/master.png" alt="" width="0" id=d2>
+                        <img class="pay" src="assets/img/pay/american2.png" alt="" width="0" id=d3>
+                        <img class="pay" src="assets/img/pay/diners.png" alt="" width="0" id=d4>
+                        <img class="pay" src="assets/img/pay/cirrus.png" alt="" width="0" id=d5>
+                        <img class="pay" src="assets/img/pay/pay.png" alt="" width="160" id=d6>
+
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan=2><a class="button" href="index.html">OK</a></th>
+                </tr>
+
+            </table>
+        </form>
+    </center>
+</body>
+<script src="assets/js/carrito.js"></script>
+
+</html>

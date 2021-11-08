@@ -1,0 +1,152 @@
+:root {
+    --colorTextos: #49454567;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-weight: var(--title-font-medium);
+    font-size: var(--big-font-size);
+}
+
+h1:hover {
+    color: var(--first-color);
+    font-weight: var(--title-font-medium);
+}
+
+.login {
+    background: rgb(241, 240, 240);
+    margin: 200px auto;
+    padding: 40px 0;
+    box-shadow: 0 0 6px 0 rgba(12, 12, 12, 0.8);
+    border-radius: 10px;
+    width: 350px;
+    height: 540px;
+}
+
+.register {
+    background: rgb(241, 240, 240);
+    margin: 200px auto;
+    padding: 40px 0;
+    box-shadow: 0 0 6px 0 rgba(12, 12, 12, 0.8);
+    border-radius: 10px;
+    width: 350px;
+    height: 940px;
+}
+
+.form {
+    /* width: 100%; */
+    margin: auto;
+}
+
+.login .grupo {
+    position: relative;
+    margin: 45px;
+}
+
+.register .grupo {
+    position: relative;
+    margin: 45px;
+}
+
+input {
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+}
+
+input:focus {
+    outline: none;
+    color: #5e5d5d;
+}
+
+label {
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -14px;
+    font-size: 12px;
+    color: #070707;
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #B06AB3, #4568DC);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before {
+    width: 100%;
+}
+
+a:hover {
+    color: #4568DC;
+}
+
+.warnings {
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #770c0c;
+    padding-top: 20px;
+    font-size: 0.9em;
+}
+
+.content-button {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    border: none;
+    width: 200px;
+}
+
+.endFooter {}
+
+@media screen and (max-width:500px) {
+    .login {
+        width: 80%;
+    }
+    .register {
+        width: 80%;
+    }
+}
