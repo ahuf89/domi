@@ -1,0 +1,51 @@
+// uri: localhost / domiServer / user/register
+// method: post
+
+// require
+// body: {
+//     "name": "",
+//     "last_name": "",
+//     "email": "",
+//     "data_birth": "",
+//     "password": "",
+//     "role": "1 admin, 2 restaurante, 3 cliente",
+//     "photo": "",
+//     "restaurant": {
+//         "name": "",
+//         "telephon": "",
+//         "address": "",
+//         "thumbnail": ""
+//     }
+// } 
+
+// response
+{
+    "message": 1,
+    "status": "0 success, 1 failed",
+}
+
+
+// uri: localhost / domiServer / user/login
+// method: post
+
+// require
+// body: {
+//     "email": "",
+//     "password": ""
+// }
+
+// response
+{
+    "message": 1,
+    "status": "0 success, 1 failed",
+    "data": {
+        "name": "",
+        "last_name": "",
+        "email": "",
+        "data_birth": "",
+        "password": "",
+        "role": "1 admin, 2 restaurante, 3 cliente",
+        "photo": ""
+    }
+
+}

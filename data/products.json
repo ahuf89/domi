@@ -1,0 +1,14 @@
+// uri: localhost / domiServer / products / restaurant / 1
+method: get {
+    "status": 1,
+    "message": "",
+    "data": [{
+        "id": 1,
+        "name": "mis pollitos",
+        "price": 10000,
+        "description": "Ajiaco rico",
+        "thumbnail": "http://127.0.0.1:5500/assets/img/restaurantes/ajiaco.jpeg",
+        "stock": 10,
+        "restaurant_id": 1
+    }]
+}
