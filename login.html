@@ -100,30 +100,24 @@ Roles
     </header>
     <main class="main ">
         <!-- home -->
-        <!-- <form>
-            <input type="text" placeholder="Correo" id="txtCorreo">
-            <input type="password" placeholder="Contraseña" value="123456" id="txtContrasenna">
-            <input type="button" value="Ingresar" id="btnIngresar">
-        </form> -->
-        <form class="login">
+        <form class="login" id="login" name="login" method="POST">
             <div class="form">
                 <h1 class="">Login</h1>
                 <div class="grupo">
-                    <input type="text" value="juan@gmail.com" id="txtCorreo"><span class="barra "></span>
+                    <input type="text" value="juan@gmail.com" name="email" id="txtCorreo"><span class="barra "></span>
                     <label>Email</label>
                 </div>
                 <div class="grupo">
-                    <input type="password" value="123456" id="txtContrasenna"><span class="barra"></span>
+                    <input type="password" value="123456" name="password" id="txtContrasenna"><span class="barra"></span>
                     <label>Password</label>
                 </div>
 
                 <div class="content-button">
-                    <input type="button" class="button" value="Iniciar Sesión" id="btnIngresar">
+                    <input type="button" class="button" value="Iniciar Sesión" id="btnIngresar" onclick="submitLogin();">
                 </div>
                 <div class="content-button">
                     <a href="register.html ">Registrarse</a>
                 </div>
-
                 <p class="warnings"></p>
             </div>
         </form>

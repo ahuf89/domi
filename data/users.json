@@ -1,3 +1,17 @@
+const uriUser = "http://localhost:3000/usuarios";
+
+fetch(uriUsers, {
+        method: 'POST'
+    })
+    .then(data => data.json())
+    .then(data => { console.log(data) })
+    .catch((err) => {
+        console.error(err);
+    });
+
+
+
+
 // uri: localhost / domiServer / user/register
 // method: post
 
@@ -49,3 +63,15 @@
     }
 
 }
+
+
+
+fetch('uriUser, {
+method: 'POST'
+
+})
+.then(data => data.json())
+    .then(data => { console.log(data) })
+    .catch((err) => {
+        console.error(err);
+    })

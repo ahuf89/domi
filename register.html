@@ -98,75 +98,54 @@ Roles
             </div>
         </nav>
     </header>
-    <main class="main ">
-        <!-- home -->
-        <!-- <form>
-            <input type="text" placeholder="Correo" id="txtCorreo">
-            <input type="password" placeholder="Contraseña" value="123456" id="txtContrasenna">
-            <input type="button" value="Ingresar" id="btnIngresar">
-        </form> -->
-        <!-- <form class="login">
-            <div class="form">
-                <h1 class="">Login</h1>
-                <div class="grupo">
-                    <input type="text" id="txtCorreo"><span class="barra "></span>
-                    <label>Email</label>
-                </div>
-                <div class="grupo">
-                    <input type="password" value="123456" id="txtContrasenna"><span class="barra"></span>
-                    <label>Password</label>
-                </div>
+    <main class="main">
+        <!-- registrar usuario -->
+        <center>
+            <div class="select-rol">
 
-                <div class="content-button">
-                    <input type="button" class="button" value="Iniciar Sesión" id="btnIngresar">
-                </div>
-                <div class="content-button">
-                    <a href="register.html ">Registrarse</a>
-                </div>
 
-                <p class="warnings"></p>
+                <div class="select-register">
+                    <button>
+                        <p>Restaurante</p>
+                        <img src="assets/icons/restaurant.png" width="100px" alt="">
+                    </button>
+                </div>
+                <div class="select-register">
+                    <button>
+                        <p>Usuario</p>
+                        <img src="assets/icons/eating.png" width="100px" alt="">
+                    </button>
+                </div>
             </div>
-        </form> -->
+        </center>
         <form class="register">
             <div class="form">
-                <h1 class="">Registro</h1>
-
-                <div class="mb-3 grupo">
-                    <input type="text" id="txtId" aria-describedby="emailHelp"><span class="barra "></span>
-                    <label for="txtId" class="form-label">Id</label>
-                </div>
-                <div class="mb-3 grupo">
-                    <input type="text" id="txtName"><span class="barra "></span>
-                    <label for="txtName" class="form-label">Name</label>
-                </div>
-                <div class="mb-3 grupo">
-                    <input type="text" id="txtLastName"><span class="barra "></span>
-                    <label for="txtCountry" class="form-label">Apellido</label>
-                </div>
-                <div class="mb-3 grupo">
-                    <input type="date" id="txtBirthday"><span class="barra "></span>
-                    <label for="txtBirth" class="form-label">Edad</label>
-                </div>
-                <div class="mb-3 grupo">
-                    <input type="email" id="txtEmail"><span class="barra "></span>
-                    <label for="txtEmail" class="form-label">Email</label>
-                </div>
-                <center>
-
-                    <select id="txtRol2" class="center" aria-label=".        form-select-sm example">
-                        <option selected>Selecciona tu Actividad</option>
-                        <option value="1">Pedir</option>
-                        <option value="2">Hacer</option>
-                        <option value="3">Entregar</option>                    
-                    </select>
-                </center>
-                <div class="mb-3 grupo">
-                    <input type="email" id="txtPassword"><span class="barra "></span>
-                    <label for="txtEmail" class="form-label">Password</label>
-                </div>
-                <div class="mb-3 grupo">
-                    <input type="email" id="txtRol"><span class="barra "></span>
-                    <label for="txtEmail" class="form-label">Rol</label>
+                <h1 class="">Registro Usuario</h1>
+                <div class="login-user">
+                    <div class="mb-3 grupo">
+                        <input type="text" id="txtName" name="name"><span class="barra"></span>
+                        <label for="txtName" class="form-label">Nombre</label>
+                    </div>
+                    <div class="mb-3 grupo">
+                        <input type="text" id="txtLastName" name="last_name"><span class="barra"></span>
+                        <label for="txtLastName" class="form-label">Apellido</label>
+                    </div>
+                    <div class="mb-3 grupo">
+                        <input type="date" id="txtBirthday" name=""><span class="barra"></span>
+                        <label for="txtBirthday" class="form-label">Fecha de Nacimiento</label>
+                    </div>
+                    <div class="mb-3 grupo">
+                        <input type="email" id="txtEmail" name="email"><span class="barra"></span>
+                        <label for="txtEmail" class="form-label">Email</label>
+                    </div>
+                    <div class="mb-3 grupo">
+                        <input type="email" id="txtDirection" name="address"><span class="barra"></span>
+                        <label for="txtEmail" class="form-label">Direccion</label>
+                    </div>
+                    <div class="mb-3 grupo">
+                        <input type="password" id="txtPassword" name="password"><span class="barra"></span>
+                        <label for="txtPassword" class="form-label">Password</label>
+                    </div>
                 </div>
                 <div class="content-button">
                     <input type="button" class="button" value="Registrarse" id="btnSaveFriend">
@@ -174,10 +153,51 @@ Roles
                 <div class="content-button">
                     <a href="login.html ">Login</a>
                 </div>
-                <!-- <button type="button" class="btn btn-light" id="btnSaveFriend">Registrarse</button> -->
+
             </div>
         </form>
+        <!-- registrar restaurante -->
+        <form class="register">
+            <div class="form">
+                <h1 class="">Registro Restaurante</h1>
+                <div class="register-restaurant">
+                    <div class="mb-3 grupo">
+                        <input type="text" id="txtName" name="name"><span class="barra" required></span>
+                        <label for="txtName" class="form-label">Nombre de restaurante</label>
+                    </div>
+                    <div class="mb-3 grupo">
+                        <input type="text" id="txtLastName" name="telelephone"><span class="barra" required></span>
+                        <label for="txtCountry" class="form-label">Telefono</label>
+                    </div>
+                    <div class="mb-3 grupo">
+                        <input type="text" id="txtBirthday" name="address"><span class="barra"></span>
+                        <label for="txtBirth" class="form-label">Direccion</label>
+                    </div>
+                    <div class="mb-3 grupo">
+                        <input type="email" id="txtEmail" name="email"><span class="barra "></span>
+                        <label for="txtEmail" class="form-label">Email</label>
+                    </div>
+                    <div class="mb-3 grupo">
+                        <center>
+                            <input type="file" id="txtEmail" name="photo"><span class="barra"></span>
+                            <label for="txtEmail" class="form-label">Foto</label>
+                        </center>
+                    </div>
+                    <div class="mb-3 grupo">
+                        <input type="password" id="txtPassword" name="password"><span class="barra"></span>
+                        <label for="txtEmail" class="form-label">Password</label>
+                    </div>
+                </div>
+                <div class="content-button">
+                    <input type="button" class="button" value="Registrarse" id="btnSaveFriend">
+                </div>
+                <div class="content-button">
+                    <a href="login.html ">Login</a>
+                </div>
 
+            </div>
+        </form>
+        <!-- footer -->
         <footer class="footer endFooter ">
             <div class="footer__bg ">
                 <div class="footer__container container grid ">
@@ -222,7 +242,6 @@ Roles
     <script src="assets/js/login/logicaInterfazInicioSesion.js"></script>
     <script src="assets/js/swiper-bundle.min.js "></script>
     <script src="assets/js/main.js "></script>
-
 </body>
 
 </html>
