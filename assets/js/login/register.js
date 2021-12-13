@@ -1,9 +1,14 @@
 const parrafo = document.getElementById("warnings")
 
 const form = {
-    email: document.querySelector("#txtCorreo"),
-    password: document.querySelector("#txtContrasenna"),
-    submit: document.querySelector("#btnIngresar"),
+    name: document.querySelector("#txtName"),
+    last_name: document.querySelector("#txtLast_name"),
+    email: document.querySelector("#txtEmail"),
+    address: document.querySelector("#txtAddress"),
+    data_birth: document.querySelector("#txtBirthday"),
+    password: document.querySelector("#txtPassword"),
+    role: document.querySelector("#txtRole"),
+    submit: document.querySelector("#btnSaveFriend"),
     messages: document.getElementById("form-messages"),
 };
 let button = form.submit.addEventListener("click", (e) => {
@@ -17,6 +22,11 @@ let button = form.submit.addEventListener("click", (e) => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
+                name: form.name.value,
+                last_name: form.last_name.value,
+                address: form.address.value,
+                data_birth: form.data_birth.value,
+                role: form.role.value,
                 email: form.email.value,
                 password: form.password.value,
             }),
@@ -24,22 +34,14 @@ let button = form.submit.addEventListener("click", (e) => {
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
-            if (data.email == form.email.value && data.password == form.password.value) {
-                if (data.role == 1) {
-                    window.open(
-                        "admin.html"
-                    );
-                } else if (data.role == 2) {
-                    window.open(
-                        "user.html"
-                    );
-                } else if (data.role == 3) {
-                    window.open(
-                        "vendedor.html"
-                    );
-                }
-            } else if (data.error) {
-                alert("Usuario o contraseña incorrectos")
+
+
+            if (data.error) {
+                alert(data.error);
+            } else {
+                // window.open(
+                //     "user.html"
+                // );
             }
         })
         .catch((err) => {

@@ -127,24 +127,33 @@ Roles
                         <label for="txtName" class="form-label">Nombre</label>
                     </div>
                     <div class="mb-3 grupo">
-                        <input type="text" id="txtLastName" name="last_name"><span class="barra"></span>
-                        <label for="txtLastName" class="form-label">Apellido</label>
-                    </div>
-                    <div class="mb-3 grupo">
-                        <input type="date" id="txtBirthday" name=""><span class="barra"></span>
-                        <label for="txtBirthday" class="form-label">Fecha de Nacimiento</label>
+                        <input type="text" id="txtLast_name" name="last_name"><span class="barra"></span>
+                        <label for="txtLast_name" class="form-label">Apellido</label>
                     </div>
                     <div class="mb-3 grupo">
                         <input type="email" id="txtEmail" name="email"><span class="barra"></span>
                         <label for="txtEmail" class="form-label">Email</label>
                     </div>
                     <div class="mb-3 grupo">
-                        <input type="email" id="txtDirection" name="address"><span class="barra"></span>
-                        <label for="txtEmail" class="form-label">Direccion</label>
+                        <input type="email" id="txtAddress" name="address"><span class="barra"></span>
+                        <label for="txtAddress" class="form-label">Direccion</label>
+                    </div>
+                    <div class="mb-3 grupo">
+                        <input type="date" id="txtBirthday" name=""><span class="barra"></span>
+                        <label for="txtBirthday" class="form-label">Fecha de Nacimiento</label>
                     </div>
                     <div class="mb-3 grupo">
                         <input type="password" id="txtPassword" name="password"><span class="barra"></span>
                         <label for="txtPassword" class="form-label">Password</label>
+                    </div>
+                    <div class="mb-3 grupo">
+                        <center>
+
+                            <select name="role" id="txtRole">
+                                <option value="1">Restaurante</option>
+                                <option value="2">Cliente</option>                            
+                            </select>
+                        </center>
                     </div>
                 </div>
                 <div class="content-button">
@@ -157,7 +166,7 @@ Roles
             </div>
         </form>
         <!-- registrar restaurante -->
-        <form class="register">
+        <!-- <form class="register">
             <div class="form">
                 <h1 class="">Registro Restaurante</h1>
                 <div class="register-restaurant">
@@ -196,7 +205,7 @@ Roles
                 </div>
 
             </div>
-        </form>
+        </form> -->
         <!-- footer -->
         <footer class="footer endFooter ">
             <div class="footer__bg ">
@@ -242,6 +251,7 @@ Roles
     <script src="assets/js/login/logicaInterfazInicioSesion.js"></script>
     <script src="assets/js/swiper-bundle.min.js "></script>
     <script src="assets/js/main.js "></script>
+    <script src="assets/js/login/register.js"></script>
 </body>
 
 </html>

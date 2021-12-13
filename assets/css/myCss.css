@@ -16,12 +16,14 @@
 }
 
 .services__title {
+    position: relative;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.1em;
     background-color: rgb(49, 40, 40);
-    opacity: 0.6;
+    /* opacity: 0.6; */
     border-radius: 8px;
-    padding: 5px
+    padding: 5px;
+    bottom: -10px;
 }
 
 .button--link2 {
