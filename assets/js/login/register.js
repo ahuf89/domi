@@ -1,35 +1,45 @@
 const parrafo = document.getElementById("warnings")
+const register = document.getElementById("register")
 
-const form = {
-    name: document.querySelector("#txtName"),
-    last_name: document.querySelector("#txtLast_name"),
-    email: document.querySelector("#txtEmail"),
-    address: document.querySelector("#txtAddress"),
-    data_birth: document.querySelector("#txtBirthday"),
-    password: document.querySelector("#txtPassword"),
-    role: document.querySelector("#txtRole"),
-    submit: document.querySelector("#btnSaveFriend"),
-    messages: document.getElementById("form-messages"),
-};
-let button = form.submit.addEventListener("click", (e) => {
+
+register.addEventListener("submit", (e) => {
     e.preventDefault();
-    const login = "http://localhost:3000/users";
+    const form = {
+        name: document.querySelector("#txtName").value,
+        last_name: document.querySelector("#txtLast_name").value,
+        celular: document.querySelector("#txtCelular").value,
+        telefono: document.querySelector("#txtCelular").value,
+        email: document.querySelector("#txtEmail").value,
+        address: document.querySelector("#txtAddress").value,
+        data_birth: document.querySelector("#txtBirthday").value,
+        photo: document.querySelector("#txtPhoto").value,
+        password: document.querySelector("#txtPassword").value,
+        role: document.querySelector("#txtRole").value,
+        submit: document.querySelector("#btnSaveFriend").value,
+        messages: document.getElementById("form-messages")
+    };
+    console.log(form.last_name)
+    const save = "http://localhost/API-DOMI/v1/user/save";
 
-    fetch(login, {
-            method: "POST",
-            headers: {
-                Accept: "application/json, text/plain, */*",
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                name: form.name.value,
-                last_name: form.last_name.value,
-                address: form.address.value,
-                data_birth: form.data_birth.value,
-                role: form.role.value,
-                email: form.email.value,
-                password: form.password.value,
-            }),
+    const formData = new FormData();
+    formData.append('name', form.name);
+    formData.append('last_name', form.last_name);
+    formData.append('telephone', form.last_name);
+    formData.append('cell_phone', form.last_name);
+    formData.append('email', form.email);
+    formData.append('address', form.address);
+    formData.append('date_birth', form.data_birth);
+    formData.append('photo', form.photo);
+    formData.append('role', form.role);
+    formData.append('password', form.password);
+
+    console.log(formData)
+
+
+    const response = fetch(save, {
+            method: 'POST',
+            body: formData
+
         })
         .then((response) => response.json())
         .then((data) => {
@@ -39,6 +49,7 @@ let button = form.submit.addEventListener("click", (e) => {
             if (data.error) {
                 alert(data.error);
             } else {
+                alert(data.message);
                 // window.open(
                 //     "user.html"
                 // );
@@ -48,30 +59,3 @@ let button = form.submit.addEventListener("click", (e) => {
             console.log(err);
         });
 });
-
-// const nombre = document.getElementById("name")
-// const sCorreo = document.getElementById("txtCorreo")
-// const sContrasenna = document.getElementById("#txtContrasenna")
-// const form = document.getElementById("form")
-
-// form.addEventListener("submit", e => {
-//     e.preventDefault()
-//     let warning = ""
-//     let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
-//     parrafo.innerHTML = ""
-//        }
-//     if (!regexEmail.test(sCorreo.value)) {
-//         warning = `El email no es valido <br>`
-//         txtCorreo.focus();
-
-//         parrafo.innerHTML = warning
-//         return 0
-//     }
-//     if (sContrasenna.value.length < 8) {
-//         warning = `La contraseña muy corta <br>(Minimo 8 caracteres)<br>`
-//         txtContrasenna.focus();
-
-//         parrafo.innerHTML = warning
-//         return 0
-//     }
-// });
