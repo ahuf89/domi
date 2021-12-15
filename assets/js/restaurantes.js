@@ -1,4 +1,4 @@
-const API_Resturants = ' http://localhost:3000/restaurants';
+const API_Resturants = ' http://localhost/API-DOMI/v1/restaurant/all/';
 
 
 fetch(API_Resturants)
@@ -8,15 +8,23 @@ fetch(API_Resturants)
 
 const mostrarRestaurantes = (data) => {
     console.log(data)
+    let dataResponse = data.data;
     let bodyRestaurants = ''
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < dataResponse.length; i++) {
+        console.log(dataResponse[i].photo);
         bodyRestaurants += `
-        <div class="services__content" style="background-image: url('${data[i].photo}');">
+        <div class="services__content" style="background-image: url('${dataResponse[i].thumbnail}');">
         <div class="title-restaurant">
-            <h3 class="services__title">${data[i].name}</h3>           
+            <h3 class="services__title">${dataResponse[i].name}</h3> 
+            <a href="comida.html?restaurant=${dataResponse[i].id}">
+                <span class="button button--flex">
+                    Visitar
+                    <i class="uil uil-arrow-right button__icon"></i>
+                </span>
+            </a>          
         </div>
         </div>
-        `
+        `;
     }
     document.getElementById('dataRestaurants').innerHTML = bodyRestaurants
 }

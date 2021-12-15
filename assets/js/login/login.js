@@ -22,21 +22,19 @@ let button = form.submit.addEventListener("click", (e) => {
         })
         .then((response) => response.json())
         .then((data) => {
-            console.log(data.data.rol);
-
+            if(data.data===undefined){
+                alert(data.message);
+                return;
+            }
+            localStorage.setItem('user',JSON.stringify(data.data));
             if (data.data.role == '1') {
-                window.open(
-                    "admin.html"
-                );
+                document.location.href ="admin.html"
+                
             } else if (data.data.role == '2') {
-                window.open(
-                    "vendedor.html"
-                );
+                document.location.href =    "vendedor.html"
+                
             } else if (data.data.role == '3') {
-
-                window.open(
-                    "user.html"
-                );
+                document.location.href =    "user.html"
             }
         })
         .catch((err) => {

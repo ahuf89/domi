@@ -1,5 +1,22 @@
-const API_Platos = ' http://localhost:3000/platos';
-const API_Pedidos = ' http://localhost:3000/pedidos';
+const user = JSON.parse(localStorage.getItem('user'));
+console.log(user);
+if(user===null){
+    document.location.href = 'index.html';
+}
+
+document.getElementById('image_profile').style.backgroundImage = `url('${user.photo}')`;
+
+const formProduct = document.getElementById('formProduct');
+const button_session = document.getElementById('close_session');
+console.log(user);
+let restaurant = user.restaurant.id;
+let imageRestaurant = user.restaurant.thumbnail;
+
+
+
+let id_restaurant = document.querySelector('.id_restaurant').value= restaurant;
+document.getElementById('image_restaurant').src = imageRestaurant;
+let API_Platos = `http://localhost/API-DOMI/v1/product/getbyidrestaurant/${restaurant}`;
 
 fetch(API_Platos)
     .then(response => response.json())
@@ -7,27 +24,48 @@ fetch(API_Platos)
     .catch(error => console.log(error))
 
 const mostrarPlatos = (data) => {
-    console.log(data)
+    response = data.data;
     let bodyPlatos = ''
-    for (let i = 0; i < data.length; i++) {
-        bodyPlatos += `<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].cuantity}</td><td>${data[i].size}</td><td>$${data[i].valor}</td><td>
-        <img src="${data[i].photo}" alt="" height="50px">
+    for (let i = 0; i < response.length; i++) {
+        bodyPlatos += `<tr><td>${response[i].id}</td><td>${response[i].name}</td><td>${response[i].stock}</td><td>$${response[i].price}</td><td>
+        <img src="${response[i].thumbnail}" alt="" height="50px">
         </td></tr>`
     }
     document.getElementById('dataPlatos').innerHTML = bodyPlatos
 }
 
-fetch(API_Pedidos)
-    .then(response => response.json())
-    .then(data => mostrarPedidos(data))
-    .catch(error => console.log(error))
+formProduct.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    const save = "http://localhost/API-DOMI/v1/product/save";
+    const response = fetch(save, {
+            method: 'POST',
+            body: new FormData(formProduct)
 
-const mostrarPedidos = (data) => {
-    console.log(data)
-    let bodyPedidos = ''
-    for (let i = 0; i < data.length; i++) {
-        bodyPedidos += `<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].cuantity}</td><td>$${data[i].
-        monto}</td><td>${data[i].cliente}</td></tr>`
-    }
-    document.getElementById('dataPedidos').innerHTML = bodyPedidos
-}
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+
+
+            if (data.error) {
+                alert(data.error);
+            } else {
+                alert(data.message);
+                location.reload();
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+
+})
+
+
+
+button_session.addEventListener('click',function(){
+    localStorage.clear();
+    window.open(
+        "index.html"
+    );
+})
+

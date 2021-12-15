@@ -11,6 +11,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <title>Mi tienda Web</title>
+    <link rel="stylesheet" href="./assets/css/admin.css">
 </head>
 
 <body>
@@ -72,6 +73,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav me-auto my-2 mx-lg-5 navbar-nav-scroll d-flex" style="--bs-scroll-height: 100px;">
+                    <div style="background-image: url(http://localhost/API-DOMI/images/users/profile4.jpg);" id="image_profile" class="thumbnail_generic"></div>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Vendedor
@@ -82,7 +84,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                            <li><a class="dropdown-item" id="close_session" href="#">Cerrar sesion</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -150,9 +152,18 @@
     <section class="container">
         <br>
         <br>
-
+        <div class="d-flex justify-content-center align-items-center">
+            <img src="http://localhost/API-DOMI/images/restaurants/restaurant1.jpg" id="image_restaurant" class="thumbnail_logo">
+        </div>
         <div>
             <h1 class="text-center">Platos</h1>
+            
+    <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                 + Agregar Plato
+            </button>
+            <br>
+            <br>
             <table class="table table-danger ">
 
                 <thead>
@@ -160,7 +171,6 @@
                         <th scope="col">#</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Cantidad</th>
-                        <th scope="col">Peso</th>
                         <th scope="col">Valor</th>
                         <th scope="col">Foto</th>
                     </tr>
@@ -189,6 +199,51 @@
             </table>
         </div>
     </section>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form id="formProduct">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Nombre Producto</label>
+                  <input type="text" class="form-control" name="name" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Stock</label>
+                    <input type="text" class="form-control" name="stock" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Valor</label>
+                    <input type="text" class="form-control" name="price" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Imagen</label>
+                    <input type="file" class="form-control" name="thumbanail" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Description</label>
+                    <textarea name="description" id="" cols="30" rows="10"></textarea>
+                </div>
+                <input type="hidden" name="restaurant_id" class="id_restaurant">
+                <input type="hidden" name="id" class="id_restaurant">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script src="assets/js/vendedor.js"></script>
