@@ -143,16 +143,16 @@
             width: 25px;
             height: 1.5em;
         }
-        
-        button {
+        /* button {
             padding: 15px 40px;
             border-radius: 8px;
-            /* background: linear-gradient(45deg, #e6e208, #1bad53); */
+            background: linear-gradient(45deg, #e6e208, #1bad53);
             font-size: 0.8em;
             color: black;
             border: none;
             margin-top: 20px;
         }
+         */
         
         .optionPay {
             background-color: rgb(248, 249, 250);
@@ -170,6 +170,7 @@
         .info-r {
             font-size: 0.5em;
             text-align: right;
+            text-transform: capitalize;
         }
         
         .info-p {
@@ -189,17 +190,27 @@
         .title-pay {
             margin-bottom: 100px;
         }
+        
+        .content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .button {
+            border: none;
+        }
     </style>
     <br>
     <br>
     <center>
-        <form name=f1>
+        <form name="f1">
             <!-- <div class=optionPay>
             </div> -->
             <table class="tabla1" width=25% height=40% border=0 cellspacing=0>
 
                 <tr>
-                    <th colspan="2" id="">Pago Domi</th>
+                    <th colspan="2">Pago Domi</th>
                 </tr>
                 <tr>
                     <th colspan="2">
@@ -209,26 +220,26 @@
                 </tr>
                 <tr>
                     <th class="info-l">Cliente</th>
-                    <th class="info-r">Alvaro Useche</th>
+                    <th class="info-r" id="customer">Alvaro Useche</th>
                 </tr>
                 <tr>
-                    <th class="info-l" id="">Dirección</th>
-                    <th class="info-r" id="">Calle 74 a # 17 a 56-80</th>
+                    <th class="info-l">Dirección</th>
+                    <th class="info-r" id="address">Calle 74 a # 17 a 56-80</th>
                 </tr>
                 <tr>
-                    <th class="info-l" id="">Plato</th>
-                    <th class="info-r" id="">Carne</th>
+                    <th class="info-l">Plato</th>
+                    <th class="info-r" id="product">Carne</th>
                 </tr>
                 <tr>
-                    <th class="info-l" id="">Cantidad</th>
-                    <th class="info-r" id="">3</th>
+                    <th class="info-l">Cantidad</th>
+                    <th class="info-r" id="quantity">3</th>
                 </tr>
                 <tr>
-                    <th class="info-l" id="">Valor U</th>
-                    <th class="info-r" id="">$10000</th>
+                    <th class="info-l">Valor U</th>
+                    <th class="info-r" id="price">$10000</th>
                 </tr>
                 <tr>
-                    <th colspan="2" id="">Total a pagar</th>
+                    <th colspan="2">Total a pagar</th>
 
                 </tr>
                 <tr>
@@ -236,7 +247,7 @@
                     <th colspan="2">
                         <div class="content-pay">
                             <center>
-                                <h4 id="" class="info-p">
+                                <h4 id="amount" class="info-p">
                                     $30000
                                 </h4>
                             </center>
@@ -318,16 +329,21 @@
 
                     </td> -->
                 </tr>
+        </form>
+        <form name="formPay">
+            <tr>
+                <td colspan="3" width="">
+                    <div class="content">
+                        <input type="button" class="button" value="Pagar" id="btnPagar">
+                    </div>
+                </td>
 
-                <tr>
-                    <th colspan=2 width="15%">
-                        <a href="factura.html" class="button button--flex">Pagar</a>
-                    </th>
-                </tr>
+            </tr>
             </table>
         </form>
     </center>
-    <script src="assets/js/login/auth.js"></script>
+    <!-- <script src="assets/js/login/auth.js"></script> -->
+    <script src="assets/js/pago.js"></script>
 </body>
 
 </html>

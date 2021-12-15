@@ -1,11 +1,11 @@
-function addCard(){
+function addCard() {
 
     const Clickbutton = document.querySelectorAll('.button_comida');
     const tbody = document.querySelector('.tbody')
     let carrito = []
-    
-    
-    
+
+
+
     Clickbutton.forEach(btn => {
         btn.addEventListener('click', addToCarritoItem)
     })
@@ -18,7 +18,7 @@ function mostrarTotal() {
 
 function addToCarritoItem(e) {
     const button = e.target
-    
+
     const item = button.closest('.card')
     const data = item.querySelector('.data_comida').value;
     console.log(JSON.parse(data));
