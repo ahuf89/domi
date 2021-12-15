@@ -94,7 +94,7 @@ a {
     z-index: 2;
 }
 
-img {
+.card-img-top {
     object-fit: cover;
     height: 150px;
 }

@@ -18,7 +18,7 @@
 .services__title {
     position: relative;
     color: #fff;
-    font-size: 1.1em;
+    /* font-size: 1.1em; */
     background-color: rgb(49, 40, 40);
     /* opacity: 0.6; */
     border-radius: 8px;
