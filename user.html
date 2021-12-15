@@ -32,7 +32,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__item">
-                        <a href="index.html" class="nav__link active-link">
+                        <a href="index.html" class="nav__link">
                             <i class="uil uil-estate nav__icon"></i> Inicio
                         </a>
                     </li>
@@ -63,13 +63,18 @@
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="trivia.html" class="nav__link">
+                        <a href="trivia.html" class="nav__link active-link">
                             <i class="uil uil-message nav__icon"></i>Trivia
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <a href="login.html" class="nav__link">
+                    <li id="login" class="nav__item">
+                        <a href="login.html" id="login" class="nav__link">
                             <i class="uil uil-message nav__icon"></i>Login
+                        </a>
+                    </li>
+                    <li id="logout" onclick="logout()" class="nav__item">
+                        <a class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>Logout
                         </a>
                     </li>
                 </ul>
@@ -250,6 +255,7 @@
     <script src="assets/js/swiper-bundle.min.js">
     </script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/login/auth.js"></script>
     <!-- <script>
             $('.carousel').carousel()
         </script> -->

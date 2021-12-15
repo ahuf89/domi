@@ -1,6 +1,8 @@
 const user = JSON.parse(localStorage.getItem('user'));
 console.log(user);
-if(user===null){
+
+if (user === null) {
+    alert("Inicia Sesión o Registrate");
     document.location.href = 'index.html';
 }
 
@@ -14,7 +16,7 @@ let imageRestaurant = user.restaurant.thumbnail;
 
 
 
-let id_restaurant = document.querySelector('.id_restaurant').value= restaurant;
+let id_restaurant = document.querySelector('.id_restaurant').value = restaurant;
 document.getElementById('image_restaurant').src = imageRestaurant;
 let API_Platos = `http://localhost/API-DOMI/v1/product/getbyidrestaurant/${restaurant}`;
 
@@ -34,7 +36,7 @@ const mostrarPlatos = (data) => {
     document.getElementById('dataPlatos').innerHTML = bodyPlatos
 }
 
-formProduct.addEventListener('submit',(e)=>{
+formProduct.addEventListener('submit', (e) => {
     e.preventDefault();
     const save = "http://localhost/API-DOMI/v1/product/save";
     const response = fetch(save, {
@@ -62,10 +64,9 @@ formProduct.addEventListener('submit',(e)=>{
 
 
 
-button_session.addEventListener('click',function(){
+button_session.addEventListener('click', function() {
     localStorage.clear();
     window.open(
         "index.html"
     );
 })
-

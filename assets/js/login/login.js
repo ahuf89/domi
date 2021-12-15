@@ -22,22 +22,36 @@ let button = form.submit.addEventListener("click", (e) => {
         })
         .then((response) => response.json())
         .then((data) => {
-            if(data.data===undefined){
+            if (data.data === undefined) {
                 alert(data.message);
                 return;
             }
-            localStorage.setItem('user',JSON.stringify(data.data));
+            localStorage.setItem('user', JSON.stringify(data.data));
             if (data.data.role == '1') {
-                document.location.href ="admin.html"
-                
+                document.location.href = "admin.html"
+
             } else if (data.data.role == '2') {
-                document.location.href =    "vendedor.html"
-                
+                document.location.href = "vendedor.html"
+
             } else if (data.data.role == '3') {
-                document.location.href =    "user.html"
+                verifyRout();
+                // document.location.href = "user.html"
             }
         })
         .catch((err) => {
             console.log(err);
         });
 });
+
+
+const atemptPay = JSON.parse(localStorage.getItem('atemptPay'));
+
+function verifyRout() {
+    console.log(atemptPay);
+    if (atemptPay == true) {
+        alert("Ahora si puedes Comprar");
+        document.location.href = 'pago.html';
+    } else {
+        document.location.href = 'comida.html';
+    }
+}

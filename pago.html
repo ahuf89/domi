@@ -16,7 +16,7 @@
 
             document.getElementById("title").innerHTML = 'Visa'
 
-            document.f1.d1.width = 170
+            document.f1.d1.width = 100
             document.f1.d2.width = 0
             document.f1.d3.width = 0
             document.f1.d4.width = 0
@@ -28,7 +28,7 @@
             document.getElementById("title").innerHTML = 'Masterd Card'
 
             document.f1.d1.width = 0
-            document.f1.d2.width = 170
+            document.f1.d2.width = 100
             document.f1.d3.width = 0
             document.f1.d4.width = 0
             document.f1.d5.width = 0
@@ -41,7 +41,7 @@
 
             document.f1.d1.width = 0
             document.f1.d2.width = 0
-            document.f1.d3.width = 170
+            document.f1.d3.width = 100
             document.f1.d4.width = 0
             document.f1.d5.width = 0
             document.f1.d6.width = 0
@@ -53,7 +53,7 @@
             document.f1.d1.width = 0
             document.f1.d2.width = 0
             document.f1.d3.width = 0
-            document.f1.d4.width = 170
+            document.f1.d4.width = 100
             document.f1.d5.width = 0
             document.f1.d6.width = 0
 
@@ -65,7 +65,7 @@
             document.f1.d2.width = 0
             document.f1.d3.width = 0
             document.f1.d4.width = 0
-            document.f1.d5.width = 170
+            document.f1.d5.width = 100
             document.f1.d6.width = 0
         }
     }
@@ -73,14 +73,19 @@
 
 <body>
     <style>
+        body {
+            background-color: #2b211e;
+        }
+        
         .tabla1 {
             margin-top: 10px;
             margin-bottom: 20px;
-            height: 100px;
+            height: 254px;
         }
         
         table {
             min-width: 400px;
+            background-color: #fff;
         }
         
         textarea {
@@ -93,7 +98,6 @@
         }
         
         .pay {
-            /* float: right; */
             height: auto;
         }
         
@@ -114,7 +118,7 @@
             border-radius: 10px;
             box-shadow: 0 0 6px 0 rgba(12, 12, 12, 0.8);
             color: black;
-            font-size: 25px;
+            font-size: 1.2em;
             font-family: "Helvetica Neue", Helvetica, Arial;
         }
         
@@ -157,6 +161,34 @@
             display: flex;
             justify-content: center;
         }
+        
+        .info-l {
+            font-size: 0.6em;
+            text-align: left;
+        }
+        
+        .info-r {
+            font-size: 0.5em;
+            text-align: right;
+        }
+        
+        .info-p {
+            /* font-size: 0.; */
+            background-color: #2b211e;
+            padding: 10px;
+            border-radius: 8px;
+            width: auto;
+            color: #fff;
+        }
+        
+        .title {
+            margin-bottom: 100px;
+            /* font-weight: 100; */
+        }
+        
+        .title-pay {
+            margin-bottom: 100px;
+        }
     </style>
     <br>
     <br>
@@ -164,15 +196,59 @@
         <form name=f1>
             <!-- <div class=optionPay>
             </div> -->
-            <table class="tabla1" width=25% height=30% border=0 cellspacing=0>
+            <table class="tabla1" width=25% height=40% border=0 cellspacing=0>
+
                 <tr>
-                    <th id=title>Total</th>
+                    <th colspan="2" id="">Pago Domi</th>
                 </tr>
-                <th id=title>$47.00</th>
+                <tr>
+                    <th colspan="2">
+                        <hr>
+                        <br>
+                    </th>
+                </tr>
+                <tr>
+                    <th class="info-l">Cliente</th>
+                    <th class="info-r">Alvaro Useche</th>
+                </tr>
+                <tr>
+                    <th class="info-l" id="">Dirección</th>
+                    <th class="info-r" id="">Calle 74 a # 17 a 56-80</th>
+                </tr>
+                <tr>
+                    <th class="info-l" id="">Plato</th>
+                    <th class="info-r" id="">Carne</th>
+                </tr>
+                <tr>
+                    <th class="info-l" id="">Cantidad</th>
+                    <th class="info-r" id="">3</th>
+                </tr>
+                <tr>
+                    <th class="info-l" id="">Valor U</th>
+                    <th class="info-r" id="">$10000</th>
+                </tr>
+                <tr>
+                    <th colspan="2" id="">Total a pagar</th>
+
+                </tr>
+                <tr>
+
+                    <th colspan="2">
+                        <div class="content-pay">
+                            <center>
+                                <h4 id="" class="info-p">
+                                    $30000
+                                </h4>
+                            </center>
+                        </div>
+                    </th>
+                </tr>
+
+                <th id="pago"></th>
             </table>
             <table width=25% height=30% border=0 cellspacing=0>
                 <tr>
-                    <th id=title>Metodo de pago</th>
+                    <th id="title">Metodo de pago</th>
                 </tr>
 
                 <tr>
@@ -182,7 +258,7 @@
                         <img class="pay" src="assets/img/pay/american2.png" alt="" width="0" id=d3>
                         <img class="pay" src="assets/img/pay/diners.png" alt="" width="0" id=d4>
                         <img class="pay" src="assets/img/pay/cirrus.png" alt="" width="0" id=d5>
-                        <img class="pay" src="assets/img/pay/pay.png" alt="" width="160" id=d6>
+                        <img class="pay" src="assets/img/pay/pay.png" alt="" width="100" id=d6>
 
                     </th>
                 </tr>
@@ -194,7 +270,7 @@
                         <div>
                             <input onclick="ver()" type="radio" name=op>Visa
                         </div>
-                        <img src="assets/img/pay/visa.png" alt="" width="70">
+                        <img src="assets/img/pay/visa.png" alt="" width="50">
                     </td>
                     <!-- <td>
                     </td> -->
@@ -204,7 +280,7 @@
                         <div>
                             <input onclick="ver()" type="radio" name=op>Masterd Card
                         </div>
-                        <img src="assets/img/pay/master.png" alt="" width="70">
+                        <img src="assets/img/pay/master.png" alt="" width="50">
                     </td>
                     <!-- <td>
                     </td> -->
@@ -214,7 +290,7 @@
                         <div>
                             <input onclick="ver()" type="radio" name=op>American Express
                         </div>
-                        <img src="assets/img/pay/american2.png" alt="" width="70">
+                        <img src="assets/img/pay/american2.png" alt="" width="50">
                     </td>
                     <!-- <td>
 
@@ -225,7 +301,7 @@
                         <div>
                             <input onclick="ver()" type="radio" name=op>Dinners
                         </div>
-                        <img src="assets/img/pay/diners.png" alt="" width="70">
+                        <img src="assets/img/pay/diners.png" alt="" width="50">
                     </td>
                     <!-- <td>
 
@@ -236,7 +312,7 @@
                         <div>
                             <input onclick="ver()" type="radio" name=op>Cirrus
                         </div>
-                        <img src="assets/img/pay/cirrus.png" alt="" width="73">
+                        <img src="assets/img/pay/cirrus.png" alt="" width="53">
                     </td>
                     <!-- <td>
 
@@ -251,6 +327,7 @@
             </table>
         </form>
     </center>
+    <script src="assets/js/login/auth.js"></script>
 </body>
 
 </html>
