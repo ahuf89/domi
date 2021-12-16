@@ -67,8 +67,24 @@ viewTotalPay();
 function viewTotalPay() {
     document.getElementById("customer").innerHTML = user.name;
     document.getElementById("address").innerHTML = user.address;
-    // document.getElementById("product").innerHTML = user.name;
-    // document.getElementById("quantity").innerHTML = ;
-    // document.getElementById("price").innerHTML = user.name;
-    // document.getElementById("amount").innerHTML = total;
+    document.getElementById("email").innerHTML = user.email;
+
+    let datos = document.getElementById('products');
+    for (item of storage) {
+        datos.innerHTML += `
+        <tr>        
+            <th class="info-l">
+                ${item.title}
+            </th>         
+            <th class="info-c">
+                ${item.cantidad}
+            </th>
+            <th class="info-r">
+            ${item.precio}
+        </th>
+        </tr>       
+        `
+    }
+
+    document.getElementById("amount").innerHTML = '$' + total;
 }
