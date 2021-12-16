@@ -2,8 +2,8 @@ const user = JSON.parse(localStorage.getItem('user'));
 console.log(user);
 
 if (user === null) {
-    alert("Inicia Sesión o Registrate");
-    document.location.href = 'index.html';
+    alert("Inicia Sesión o Registrate")
+    document.location.href = 'login.html';
 }
 
 document.getElementById('image_profile').style.backgroundImage = `url('${user.photo}')`;
